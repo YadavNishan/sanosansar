@@ -12,7 +12,7 @@ export default function HomePage() {
         component="div"
         sx={{ flexGrow: 1 }}
       >
-        &#128008; Welcome to the pet adoption agency &#128021;
+        &#128008; SanoSansar | Adopt Your Pet From Us   &#128021;
       </Typography>
       <Typography
         className="sub-header"
