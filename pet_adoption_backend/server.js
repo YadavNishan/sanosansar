@@ -11,6 +11,7 @@ const {
 const { jwtVerify } = require("./lib/JWT");
 const { getUserById } = require("./services/users.service");
 const { getPermissionsList } = require("./lib/permissions");
+const path = require("path")
 
 const app = express();
 
@@ -20,6 +21,9 @@ app.use(
     origin: process.env.FRONTEND_URL,
   })
 );
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 
 const port = process.env.PORT || 4000;
 
@@ -46,6 +50,7 @@ app.use((req, res, next) => {
 
   next();
 });
+
 
 
 //auth middleware
@@ -88,6 +93,7 @@ app.use(async (req, res, next) => {
 app.use("/users", require("./routes/users.route"));
 app.use("/pets", require("./routes/pets.route"));
 app.use("/upload", require("./routes/upload.route"));
+
 
 // error layer
 app.use((err, req, res, next) => {

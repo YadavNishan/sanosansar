@@ -95,11 +95,7 @@ function App() {
         </ToastContextProvider>
       </Container>
 
-      <footer className="footer">
-        <Typography align="center" gutterBottom>
-          © Andrey Diskin 2022
-        </Typography>
-      </footer>
+      
     </>
   );
 }

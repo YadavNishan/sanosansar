@@ -27,7 +27,7 @@ export const updateUserUrl = (id) => urlBase + usersUrl + id;
 
 export const publicPicUrlBase = urlBase + "/images/";
 
-export const imagesBaseUrl = `https://pet-app-images.s3.eu-west-2.amazonaws.com/`;
+export const imagesBaseUrl = `http://localhost:4000/uploads/`;
 
 export const editPetBaseUrl = "/pets/edit/";
 
